@@ -1,0 +1,9 @@
+fr:
+  custom:
+    body_title: "Description"
+    services_title: "Services"
+    amenities_title: "Amenities & services"
+    rates_title: "Rates"
+    rates_policy_title: "Rates policy"
+    cancellation_policy_title: "Cancellation policy"
+    main_contact_title: "Main contact"

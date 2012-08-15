@@ -1,0 +1,9 @@
+fr:
+  custom:
+    body_title: "Description"
+    services_title: "Services"
+    amenities_title: "Equipements et services"
+    rates_title: "Tarifs"
+    rates_policy_title: "Politique tarifaire"
+    cancellation_policy_title: "Politique d'annulation"
+    main_contact_title: "Contact principal"

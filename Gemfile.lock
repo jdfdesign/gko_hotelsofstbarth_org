@@ -1,14 +1,13 @@
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_auth
+GIT
+  remote: git@github.com:jdfdesign/gko_cms3.git
+  revision: e86594a2c91c6e7ffa6f43e2ce88fe3df024486d
   specs:
-    gko_auth (0.3.55)
+    gko_auth (0.3.57)
       cancan (= 1.6.8)
       devise (= 2.1.2)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_core
-  specs:
-    gko_core (0.3.55)
+    gko_blog (0.3.57)
+    gko_categories (0.3.57)
+    gko_core (0.3.57)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
@@ -41,25 +40,14 @@ PATH
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_documents
-  specs:
-    gko_documents (0.3.55)
+    gko_documents (0.3.57)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_images
-  specs:
-    gko_images (0.3.55)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_inquiries
-  specs:
-    gko_inquiries (0.3.55)
+    gko_images (0.3.57)
+    gko_inquiries (0.3.57)
       filters_spam (~> 0.2)
       launchy
+    gko_stickers (0.3.57)
 
 GEM
   remote: http://rubygems.org/
@@ -245,11 +233,14 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.2)
-  gko_auth!
-  gko_core!
-  gko_documents!
-  gko_images!
-  gko_inquiries!
+  gko_auth (= 0.3.57)!
+  gko_blog (= 0.3.57)!
+  gko_categories (= 0.3.57)!
+  gko_core (= 0.3.57)!
+  gko_documents (= 0.3.57)!
+  gko_images (= 0.3.57)!
+  gko_inquiries (= 0.3.57)!
+  gko_stickers (= 0.3.57)!
   iconv
   sass-rails (~> 3.2.5)
   uglifier (>= 1.0.3)

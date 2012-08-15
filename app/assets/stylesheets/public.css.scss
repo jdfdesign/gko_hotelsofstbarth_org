@@ -47,8 +47,8 @@ $linkColorHover:        darken($linkColor, 15%);
 
 // Typography
 // -------------------------
-$sansFontFamily:        "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serifFontFamily:       "museo-slab", Georgia, "Times New Roman", Times, serif;
+$sansFontFamily:        "ff-meta-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily:       "ff-meta-serif-web-pro", Georgia, "Times New Roman", Times, serif;
 $monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
 
 $baseFontSize:          13px;
@@ -179,7 +179,9 @@ $infoBorder:              darken(adjust_hue($infoBackground, -10deg), 7%);
 /*-----------------------------------------
  GALLERIA
 ----------------------------------------- */
-
+.galleria {
+	margin-bottom: $baseLineHeight*2;
+}
 /*-----------------------------------------
  LAYOUT
 ----------------------------------------- */
@@ -228,7 +230,32 @@ body {
 	margin: $baseLineHeight*2 0;
 	color: $darkBrown;
 }
-
+/*-----------------------------------------
+ HEADER 
+----------------------------------------- */
+.navbar .btn-navbar {
+	clear: both;
+	font-weight: normal;
+ 	text-shadow: 0px 1px 0 black;
+	color: $white;
+	@include buttonBackground($blueAlt, darken($blueAlt, 10%));
+	@include border-radius(4px 4px 0 0);
+	border-bottom: none;
+}
+.navbar .btn-navbar:hover {
+	color: $white;	
+}
+// Active state
+.navbar .btn-navbar.active,
+.navbar .btn-navbar:active {
+  color: $white;
+}
+aside {
+	h4 {
+		color: $darkBrown;
+		text-transform: uppercase;
+	}
+}
 /*-----------------------------------------
  GRID
 ----------------------------------------- */
@@ -272,12 +299,36 @@ body {
  RESPONSIVE
 ----------------------------------------- */
 @import "twitter/bootstrap/responsive"; 
-
-@media (max-width: 979px) {
-
+@media (max-width: 480px) {
+	.navbar .brand {
+		font-size: 16px;
+	}
 }
-
-
+@media (max-width: 767px) {
+	.navbar-inner {
+		border-bottom: 2px solid $blueAlt;
+		@include border-radius(0);
+	}
+	// override bootstrap default
+	.heading {
+		padding: 40px 0 30px 0;
+	}
+	// override bootstrap default
+	body {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.container-fluid {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+@media (max-width: 979px) {
+	.navbar .brand {
+		margin: 12px 0 12px 0;
+		padding: 0 0 0 98px;
+	}
+}
 @media (min-width: 980px) {
 	/*-----------------------------------------
 	 HEADER

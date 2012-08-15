@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120814230200) do
+ActiveRecord::Schema.define(:version => 20120815125460) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -29,6 +29,49 @@ ActiveRecord::Schema.define(:version => 20120814230200) do
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
   end
+
+  create_table "categories", :force => true do |t|
+    t.integer "site_id"
+    t.integer "section_id"
+    t.integer "parent_id"
+    t.integer "lft",              :default => 0, :null => false
+    t.integer "rgt",              :default => 0, :null => false
+    t.string  "name"
+    t.string  "slug"
+    t.string  "path"
+    t.string  "title"
+    t.text    "body"
+    t.string  "meta_title"
+    t.text    "meta_description"
+  end
+
+  add_index "categories", ["parent_id"], :name => "index_categories_on_parent_id"
+  add_index "categories", ["section_id"], :name => "index_categories_on_section_id"
+
+  create_table "categorizations", :force => true do |t|
+    t.integer "categorizable_id"
+    t.string  "categorizable_type"
+    t.integer "category_id"
+  end
+
+  add_index "categorizations", ["categorizable_id", "categorizable_type"], :name => "index_categorizations_on_categorizable_id_and_categorizable_type"
+  add_index "categorizations", ["category_id"], :name => "index_categorizations_on_category_id"
+
+  create_table "category_translations", :force => true do |t|
+    t.integer  "category_id"
+    t.string   "locale"
+    t.string   "title"
+    t.string   "path"
+    t.string   "slug"
+    t.text     "body"
+    t.string   "meta_title"
+    t.text     "meta_description"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "category_translations", ["category_id"], :name => "index_category_translations_on_category_id"
+  add_index "category_translations", ["locale"], :name => "index_category_translations_on_locale"
 
   create_table "configurations", :force => true do |t|
     t.integer  "site_id"
@@ -438,6 +481,39 @@ ActiveRecord::Schema.define(:version => 20120814230200) do
   end
 
   add_index "states", ["country_id"], :name => "index_states_on_country_id"
+
+  create_table "sticker_translations", :force => true do |t|
+    t.integer  "sticker_id"
+    t.string   "locale"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "sticker_translations", ["locale"], :name => "index_sticker_translations_on_locale"
+  add_index "sticker_translations", ["sticker_id"], :name => "index_sticker_translations_on_sticker_id"
+
+  create_table "stickers", :force => true do |t|
+    t.string   "name"
+    t.integer  "site_id"
+    t.integer  "section_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "stickers", ["name"], :name => "index_stickers_on_name"
+  add_index "stickers", ["site_id", "section_id"], :name => "index_stickers_on_site_id_and_section_id"
+
+  create_table "stickings", :force => true do |t|
+    t.integer  "sticker_id"
+    t.integer  "stickable_id"
+    t.string   "stickable_type"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "stickings", ["stickable_id", "stickable_type"], :name => "index_stickings_on_stickable_id_and_stickable_type"
+  add_index "stickings", ["sticker_id"], :name => "index_stickings_on_sticker_id"
 
   create_table "supports", :force => true do |t|
     t.integer "owner_id"

@@ -7,7 +7,6 @@ class CreateMembersTable < ActiveRecord::Migration
       t.string :category
       t.text :rates_policy
       t.text :cancellation_policy
-      t.text :amenities
       t.text :rates
       t.text :main_contact
       t.text :services
