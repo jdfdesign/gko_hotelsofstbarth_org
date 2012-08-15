@@ -1,0 +1,12 @@
+<%# cache("#{site.id.to_s}_#{I18n.locale.to_s}_site_footer") do %>
+    <!-- Footer
+   ================================================== -->
+    <div id='footer-container' class='container-fluid visible-desktop hide-on-print'>
+      <div id='footer' class='row-fluid'>
+        <div class="span12">
+            <%= render 'pipe_menu', :mobile_behaviour => "hide-on-mobile" %>
+            <%= render 'tools_menu', :mobile_behaviour => "hide-on-mobile" %>
+        </div>
+      </div>
+    </div>
+<%# end %>

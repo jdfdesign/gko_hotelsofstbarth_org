@@ -1,0 +1,8 @@
+<%= grid_item_tag_for(realty_agency) do %>
+	<%= render_record_thumb(realty_agency) %>
+	<%= grid_item_caption_tag do %>
+		<%= render_record_title(realty_agency) %>
+		<%= render_record_description(realty_agency) %>
+		<%= render_record_link(realty_agency) %>
+	<% end %>
+<% end if realty_agency %>

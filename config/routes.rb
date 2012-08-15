@@ -1,0 +1,27 @@
+GkoHotelsofstbarthOrg::Application.routes.draw do
+  get 'hotel_lists/:hotel_list_id', 
+    :to => 'hotels#index', 
+    :as => :hotel_list
+  match 'hotel_lists/:hotel_list_id/:permalink', 
+    :to => "hotels#show", 
+    :as => :hotel_list_hotel
+
+  get 'realty_agency_lists/:realty_agency_list_id', 
+    :to => 'realty_agencies#index', 
+    :as => :realty_agency_list
+  match 'realty_agency_lists/:realty_agency_list_id/:permalink', 
+    :to => "realty_agencies#show", 
+    :as => :realty_agency_list_realty_agency
+        
+  namespace :admin do
+    resources :sites do
+      resources :areas
+      resources :hotel_lists do
+        resources :hotels
+      end
+      resources :realty_agency_lists do
+        resources :realty_agencies
+      end
+    end
+  end
+end
