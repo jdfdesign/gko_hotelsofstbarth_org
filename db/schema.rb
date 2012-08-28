@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120815125460) do
+ActiveRecord::Schema.define(:version => 20120820105904) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -286,6 +286,19 @@ ActiveRecord::Schema.define(:version => 20120815125460) do
     t.integer  "site_id"
   end
 
+  create_table "languages", :force => true do |t|
+    t.integer  "site_id"
+    t.string   "name"
+    t.string   "code"
+    t.string   "presentation"
+    t.boolean  "public",       :default => false
+    t.boolean  "default",      :default => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
+
+  add_index "languages", ["site_id"], :name => "index_languages_on_site_id"
+
   create_table "liquid_models", :force => true do |t|
     t.integer  "site_id"
     t.text     "body"
@@ -311,7 +324,6 @@ ActiveRecord::Schema.define(:version => 20120815125460) do
     t.string   "category"
     t.text     "rates_policy"
     t.text     "cancellation_policy"
-    t.text     "amenities"
     t.text     "rates"
     t.text     "main_contact"
     t.text     "services"
