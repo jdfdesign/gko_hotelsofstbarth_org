@@ -6,12 +6,12 @@ class AddPositionToLanguage < ActiveRecord::Migration
       add_index :languages, [:position, :site_id]
     end
     Site.all.each do |site|
-      if default_language = site.languages.get_default
-        default_language.move_to_top if default_language.respond_to?(:move_to_top)
-      end
-      site.languages.not_default.each_with_index do |language, index|
-        language.move_to_bottom if default_language.respond_to?(:move_to_bottom)
-      end
+      #if default_language = site.languages.get_default
+      #  default_language.move_to_top if default_language.respond_to?(:move_to_top)
+      #end
+      #site.languages.not_default.each_with_index do |language, index|
+      #  language.move_to_bottom if default_language.respond_to?(:move_to_bottom)
+      #end
     end
   end
 
