@@ -7,10 +7,10 @@ class AddPositionToLanguage < ActiveRecord::Migration
     end
     Site.all.each do |site|
       if default_language = site.languages.get_default
-        default_language.insert_at(1)
+        default_language.move_to_top
       end
       site.languages.not_default.each_with_index do |language, index|
-        language.insert_at(index + 2)
+        language.move_to_bottom
       end
     end
   end
