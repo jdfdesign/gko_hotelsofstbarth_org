@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120829163447) do
+ActiveRecord::Schema.define(:version => 20120907132618) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -343,14 +343,6 @@ ActiveRecord::Schema.define(:version => 20120829163447) do
     t.datetime "updated_at",                    :null => false
   end
 
-  create_table "mail_methods", :force => true do |t|
-    t.integer  "site_id"
-    t.string   "environment"
-    t.boolean  "active",      :default => true
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-  end
-
   create_table "member_options", :force => true do |t|
     t.integer  "area_id"
     t.string   "category"
@@ -514,6 +506,8 @@ ActiveRecord::Schema.define(:version => 20120829163447) do
     t.string   "logo_ext"
     t.string   "default_image_uid"
     t.integer  "site_registrations_count", :default => 0
+    t.integer  "languages_count",          :default => 0
+    t.text     "mailer_settings"
   end
 
   add_index "sites", ["host"], :name => "index_sites_on_host", :unique => true
