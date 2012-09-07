@@ -1,4 +1,11 @@
 GkoHotelsofstbarthOrg::Application.routes.draw do
+  
+  get 'hotel_lists/:hotel_list_id/categories/:category_id',
+      :to => 'hotels#index',
+      :as => :hotel_list_category
+  get 'hotel_lists/:hotel_list_id/tags/:sticker_id',
+      :to => 'hotels#index',
+      :as => :hotel_list_sticker
   get 'hotel_lists/:hotel_list_id', 
     :to => 'hotels#index', 
     :as => :hotel_list
@@ -6,6 +13,12 @@ GkoHotelsofstbarthOrg::Application.routes.draw do
     :to => "hotels#show", 
     :as => :hotel_list_hotel
 
+  get 'realty_agency_lists/:realty_agency_list_id/categories/:category_id',
+      :to => 'realty_agencies#index',
+      :as => :realty_agency_category
+  get 'realty_agency_lists/:realty_agency_list_id/tags/:sticker_id',
+      :to => 'realty_agencies#index',
+      :as => :realty_agency_sticker
   get 'realty_agency_lists/:realty_agency_list_id', 
     :to => 'realty_agencies#index', 
     :as => :realty_agency_list
