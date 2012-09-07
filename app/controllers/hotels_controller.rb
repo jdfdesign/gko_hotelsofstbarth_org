@@ -5,6 +5,6 @@ class HotelsController < ContentsController
     
   protected
   def load_resources
-    end_of_association_chain.includes(:images, :meta).live
+    end_of_association_chain.includes(:images, :meta).published.with_translations(I18n.locale)
   end
 end
