@@ -7,3 +7,55 @@ fr:
     rates_policy_title: "Politique tarifaire"
     cancellation_policy_title: "Politique d'annulation"
     main_contact_title: "Contact principal"
+  admin:
+    hotel_lists:
+      help: "Créer une liste d'hôtel"
+      actions:
+          new: Ajouter une nouvelle liste d'hôtel
+          destroy: Supprimer cette liste d'hôtel
+          edit: Modifier cette liste d'hôtel
+          index: Liste des hôtels
+          view: Voir la page publique
+      titles:
+          new: Ajout d'une nouvelle liste d'hôtel
+          index: Liste des hôtels
+          edit: Modification d'une liste d'hôtel 
+          
+    hotels:
+      help: "Créer un hôtel"
+      actions:
+          new: Ajouter un hôtel
+          destroy: Supprimer cet hôtel
+          edit: Modifier cet hôtel
+          index: Liste des hôtels
+          view: Voir la page publique
+      titles:
+          new: Ajout d'un hôtel
+          index: Liste des hôtels
+          edit: Modification d'un hôtel
+          
+    realty_agency_lists:
+      help: "Créer une liste d'agences immobilière"
+      actions:
+          new: Ajouter une nouvelle liste d'agence immobilière
+          destroy: Supprimer cette liste d'agence immobilière
+          edit: Modifier cette liste d'agences immobilière
+          index: Liste des agences immobilière
+          view: Voir la page publique
+      titles:
+          new: Ajout d'une nouvelle liste d'agences immobilière
+          index: Liste des agences immobilière
+          edit: Modification d'une liste d'agences immobilière
+
+    realty_agencies:
+      help: "Créer une agence immobilière"
+      actions:
+          new: Ajouter une agence immobilière
+          destroy: Supprimer cette agence immobilière
+          edit: Modifier cette agence immobilière
+          index: Liste des agences immobilière
+          view: Voir la page publique
+      titles:
+          new: Ajout d'une agence immobilière
+          index: Liste des agences immobilière
+          edit: Modification d'une agence immobilière        
