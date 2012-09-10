@@ -27,6 +27,7 @@ GkoHotelsofstbarthOrg::Application.routes.draw do
     :as => :realty_agency_list_realty_agency
         
   namespace :admin do
+    resources :pictos
     resources :sites do
       resources :areas
       resources :hotel_lists do

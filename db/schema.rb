@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120907143900) do
+ActiveRecord::Schema.define(:version => 20120910214915) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20120907143900) do
     t.integer  "site_id"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
+    t.string   "picto_uid"
   end
 
   create_table "assets", :force => true do |t|
@@ -343,6 +344,23 @@ ActiveRecord::Schema.define(:version => 20120907143900) do
     t.datetime "updated_at",                    :null => false
   end
 
+  create_table "member_option_translations", :force => true do |t|
+    t.integer  "member_option_id"
+    t.string   "locale"
+    t.text     "body"
+    t.text     "rates_policy"
+    t.text     "cancellation_policy"
+    t.text     "amenities"
+    t.text     "rates"
+    t.text     "main_contact"
+    t.text     "services"
+    t.text     "annual_opening"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
+
+  add_index "member_option_translations", ["member_option_id"], :name => "index_member_option_translations_on_member_option_id"
+
   create_table "member_options", :force => true do |t|
     t.integer  "area_id"
     t.string   "category"
@@ -391,6 +409,29 @@ ActiveRecord::Schema.define(:version => 20120907143900) do
   add_index "partners", ["position", "section_id"], :name => "index_partners_on_position_and_section_id"
   add_index "partners", ["section_id"], :name => "index_partners_on_section_id"
   add_index "partners", ["site_id"], :name => "index_partners_on_site_id"
+
+  create_table "picto_assignments", :force => true do |t|
+    t.integer  "position",                      :default => 1, :null => false
+    t.integer  "pictable_id",                                  :null => false
+    t.string   "pictable_type",   :limit => 40,                :null => false
+    t.integer  "attachable_id",                                :null => false
+    t.string   "attachable_type", :limit => 40,                :null => false
+    t.datetime "created_at",                                   :null => false
+    t.datetime "updated_at",                                   :null => false
+  end
+
+  add_index "picto_assignments", ["attachable_id", "attachable_type"], :name => "index_picto_assignments_on_attachable_id_and_attachable_type"
+  add_index "picto_assignments", ["pictable_id", "pictable_type"], :name => "index_picto_assignments_on_pictable_id_and_pictable_type"
+
+  create_table "pictos", :force => true do |t|
+    t.string   "image_uid"
+    t.string   "image_name"
+    t.string   "type"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "pictos", ["image_uid"], :name => "index_pictos_on_image_uid"
 
   create_table "preferences", :force => true do |t|
     t.string   "key",                      :null => false
@@ -508,6 +549,7 @@ ActiveRecord::Schema.define(:version => 20120907143900) do
     t.integer  "site_registrations_count", :default => 0
     t.integer  "languages_count",          :default => 0
     t.text     "mailer_settings"
+    t.datetime "liquid_models_updated_at"
   end
 
   add_index "sites", ["host"], :name => "index_sites_on_host", :unique => true
