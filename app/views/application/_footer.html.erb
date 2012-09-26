@@ -2,11 +2,19 @@
 ================================================== -->
  <footer id='footer-container' class='container-fluid hide-on-print'>
    <div id='footer' class='row-fluid'>
-     <div class="span12 footer-content">
+     <div class="span3">
 		<%= render_menu('pipe') %>
 		<%= render_menu('tools') %>
-		<%= render_menu('legal') %>
      </div>
+	<% site.members.order(:title).in_groups_of((site.members.count/2).floor, false) do |group| %>
+	 <div class="span3">
+		<ul class='nav'>
+		<% for m in group %>
+		<li><%= link_to m.title, m.public_url %></li>
+		<% end %>
+		</ul>
+     </div>
+	<% end %>
    </div>
  </footer>
 

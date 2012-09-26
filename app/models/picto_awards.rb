@@ -1,0 +1,3 @@
+class PictoAward < Picto
+
+end

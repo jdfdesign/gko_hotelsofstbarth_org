@@ -47,8 +47,9 @@ module GkoHotelsofstbarthOrg
     config.assets.version = '1.0'
     
     config.to_prepare { 
-      require_dependency 'hotel_list'
-      require_dependency 'realty_agency_list' 
+      
+     # require_dependency 'hotel_list'
+     # require_dependency 'realty_agency_list' 
     }
     
   end

@@ -1,4 +1,5 @@
 <%= render "form_area_select", :f => f %>
+<%= render 'form_file_field', :f => f, :accessor => :map, :thumb_size => '80x80', :hint => t("simple_form.hints.partner.image", :size => '80x80'), :deletable => true %>
 <% f.input :category %>
 <%= render 'form_wymeditor_field', :f => f, :field_name => :services %>
 <%= render 'form_wymeditor_field', :f => f, :field_name => :rates %>

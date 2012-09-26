@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120910214915) do
+ActiveRecord::Schema.define(:version => 20120925174600) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(:version => 20120910214915) do
     t.integer  "site_id"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
-    t.string   "picto_uid"
   end
 
   create_table "assets", :force => true do |t|
@@ -373,6 +372,7 @@ ActiveRecord::Schema.define(:version => 20120910214915) do
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
     t.integer  "member_id"
+    t.string   "map_uid"
   end
 
   add_index "member_options", ["member_id"], :name => "index_member_options_on_member_id"
@@ -429,9 +429,11 @@ ActiveRecord::Schema.define(:version => 20120910214915) do
     t.string   "type"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "site_id"
   end
 
   add_index "pictos", ["image_uid"], :name => "index_pictos_on_image_uid"
+  add_index "pictos", ["site_id"], :name => "index_pictos_on_site_id"
 
   create_table "preferences", :force => true do |t|
     t.string   "key",                      :null => false

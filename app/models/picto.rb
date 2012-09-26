@@ -1,6 +1,9 @@
 class Picto < ActiveRecord::Base
+  
+  belongs_to_site
+  
   # What is the max image size a user can upload
-  MAX_SIZE_IN_KB = 200
+  MAX_SIZE_IN_KB = 2000
   # What is the max image format a user can upload
   FILE_TYPES = %w(image/jpg image/jpeg image/png image/gif image/tiff)
 
@@ -26,12 +29,10 @@ class Picto < ActiveRecord::Base
   validates_property :mime_type,
                      :of => :image,
                      :in => FILE_TYPES,
-                     :message => :incorrect_file_type
+                     :message => "bad file "
 
   validates_property :width,
                      :of => :image, :in => (100..1000),
-                     :message => I18n.t(:'activerecord.errors.models.image.incorrect_dimensions',
-                                        :min => 100,
-                                        :max => 3000)
+                     :message => "bad size "
 end
 

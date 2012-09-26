@@ -1,17 +1,17 @@
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: 3dbe05809608cde3a4517411406df0c67bf2a772
+  revision: 350adbaf6d256fc2ee113b8039ae154a6b6554e8
   specs:
-    gko_albums (0.4.02)
-    gko_auth (0.4.02)
+    gko_albums (0.4.06)
+    gko_auth (0.4.06)
       cancan (= 1.6.8)
       devise (= 2.1.2)
-    gko_blog (0.4.02)
-      gko_categories (= 0.4.02)
-      gko_core (= 0.4.02)
-      gko_stickers (= 0.4.02)
-    gko_categories (0.4.02)
-    gko_core (0.4.02)
+    gko_blog (0.4.06)
+      gko_categories (= 0.4.06)
+      gko_core (= 0.4.06)
+      gko_stickers (= 0.4.06)
+    gko_categories (0.4.06)
+    gko_core (0.4.06)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
@@ -23,7 +23,7 @@ GIT
       cucumber (~> 1.1.4)
       dragonfly (~> 0.9.12)
       dropbox-sdk (~> 1.2.0)
-      exception_notification
+      exception_notification (~> 2.6.1)
       faker (= 1.0.0)
       gem-patching (= 0.0.3)
       globalize3 (= 0.2.0)
@@ -50,13 +50,13 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-    gko_documents (0.4.02)
+    gko_documents (0.4.06)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_images (0.4.02)
-    gko_inquiries (0.4.02)
+    gko_images (0.4.06)
+    gko_inquiries (0.4.06)
       filters_spam (~> 0.2)
-    gko_stickers (0.4.02)
+    gko_stickers (0.4.06)
 
 GEM
   remote: http://rubygems.org/
@@ -99,7 +99,7 @@ GEM
     bcrypt-ruby (3.0.1)
     builder (3.0.0)
     cancan (1.6.8)
-    capistrano (2.13.3)
+    capistrano (2.13.4)
       highline
       net-scp (>= 1.0.0)
       net-sftp (>= 2.0.0)
@@ -163,6 +163,7 @@ GEM
     jquery-rails (2.0.3)
       railties (>= 3.1.0, < 5.0)
       thor (~> 0.14)
+    jruby-pageant (1.1.1)
     json (1.7.5)
     launchy (2.1.2)
       addressable (~> 2.3)
@@ -184,7 +185,8 @@ GEM
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
       net-ssh (>= 2.0.9)
-    net-ssh (2.5.2)
+    net-ssh (2.6.0)
+      jruby-pageant (>= 1.1.1)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
     nokogiri (1.5.5)
@@ -262,15 +264,15 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.2)
-  gko_albums (= 0.4.02)!
-  gko_auth (= 0.4.02)!
-  gko_blog (= 0.4.02)!
-  gko_categories (= 0.4.02)!
-  gko_core (= 0.4.02)!
-  gko_documents (= 0.4.02)!
-  gko_images (= 0.4.02)!
-  gko_inquiries (= 0.4.02)!
-  gko_stickers (= 0.4.02)!
+  gko_albums (= 0.4.06)!
+  gko_auth (= 0.4.06)!
+  gko_blog (= 0.4.06)!
+  gko_categories (= 0.4.06)!
+  gko_core (= 0.4.06)!
+  gko_documents (= 0.4.06)!
+  gko_images (= 0.4.06)!
+  gko_inquiries (= 0.4.06)!
+  gko_stickers (= 0.4.06)!
   iconv
   sass-rails (~> 3.2.5)
   uglifier (>= 1.0.3)

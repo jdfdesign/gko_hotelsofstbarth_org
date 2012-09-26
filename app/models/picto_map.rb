@@ -1,0 +1,3 @@
+class PictoMap < Picto
+
+end

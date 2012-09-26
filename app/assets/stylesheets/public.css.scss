@@ -170,11 +170,38 @@ $infoText:                #3a87ad;
 $infoBackground:          #d9edf7;
 $infoBorder:              darken(adjust_hue($infoBackground, -10deg), 7%);
 
+// GRID
+// --------------------------------------------------
+
+// Default 940px grid
+// -------------------------
+$gridColumns:             12;// !default
+$gridColumnWidth:         60px;// !default
+$gridGutterWidth:         20px;// !default
+$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));// !default
+
+// Fluid grid
+// -------------------------
+$fluidGridColumnWidth:    6.382978723%;// !default
+$fluidGridGutterWidth:    2.127659574%;// !default
+
+
+// Navbar (gko addon)
+// -------------------------
+$navbarLinkBackground:            $darkBrown;	
+// Footer (gko addon)
+// -------------------------
+$footerHeight:                    40px;// !default;
+$footerBackground:                $navbarBackground;// !default;
+$footerText:                      $navbarText;// !default;
+$footerLinkColor:                 $navbarLinkColor;// !default;
+$footerLinkBackground:       	  $navbarLinkBackground;// !default;
+$footerLinkColorHover:            $navbarLinkColorHover;// !default;
+$footerLinkBackgroundHover:       $navbarLinkBackgroundHover;// !default;
 
 // Import
 @import "twitter/bootstrap";
-@import "gko/mixin.1.0.0";
-@import "gko/default";
+@import "gko/public/base";
 @import "galleria";
 /*-----------------------------------------
  GALLERIA
@@ -260,15 +287,19 @@ aside {
  GRID
 ----------------------------------------- */
 .grid > li {
-	width: 100%;
+
 	background: #FDFDFD;
-	padding: 24px;
+	padding: 18px;
 	.thumbnail {
 		margin-bottom: $baseLineHeight * 2;
 		box-shadow: none;
 		border: none;
 		line-height: 1.5;
 		padding: 0;
+		.title {
+			line-height: 24px;
+			padding-bottom: 9px;
+		}
 		
 		.image {
 			float: left;
@@ -278,10 +309,16 @@ aside {
 			float: left;
 			position:relative;
 			width: 70%;
+			padding: 0;
+			margin-left: 12px;
+		}
+		.description {
+			
 		}
 		.links a {
 			border: none;
-			background: $white;
+			background: $blueAlt;
+			color: $white;
 			padding: 8px 10px;
 			margin: 10px 0 0 0;
 			@include border-radius(5px);
@@ -289,8 +326,7 @@ aside {
 			@include transition(all 0.3s ease-in-out);
 		}
 		.links a:hover {
-			background: $blueAlt;
-			color: $white;
+			background: darken($blueAlt, 10%);
 			text-shadow:none;
 		}
 	}
@@ -298,7 +334,9 @@ aside {
 /*-----------------------------------------
  RESPONSIVE
 ----------------------------------------- */
-@import "twitter/bootstrap/responsive"; 
+@import "twitter/bootstrap/responsive";
+@import "gko/default_responsive";
+
 @media (max-width: 480px) {
 	.navbar .brand {
 		font-size: 16px;
@@ -328,6 +366,7 @@ aside {
 		margin: 12px 0 12px 0;
 		padding: 0 0 0 98px;
 	}
+	
 }
 @media (min-width: 980px) {
 	/*-----------------------------------------
@@ -354,7 +393,9 @@ aside {
 	#footer-container {
 	
 		ul.nav {
-			@include center-nav();
+			li {
+				float: none;
+			}
 		}
 
 		.nav > li > a  {
