@@ -2,15 +2,17 @@
 ================================================== -->
  <footer id='footer-container' class='container-fluid hide-on-print'>
    <div id='footer' class='row-fluid'>
-     <div class="span3">
+     <div class="span12">
 		<%= render_menu('pipe') %>
 		<%= render_menu('tools') %>
      </div>
-	<% site.members.order(:title).in_groups_of((site.members.count/2).floor, false) do |group| %>
-	 <div class="span3">
-		<ul class='nav'>
-		<% for m in group %>
-		<li><%= link_to m.title, m.public_url %></li>
+   </div>
+   <div id="footer-members" class='row-fluid'>
+   <% site.members.sort_by(&:title).in_groups(3) do |group| %>
+	 <div class="span4">
+		<ul class='nav nav-members'>
+		<% group.each do |m| %>
+		<li><%= link_to m.title, m.public_url if m %></li>
 		<% end %>
 		</ul>
      </div>

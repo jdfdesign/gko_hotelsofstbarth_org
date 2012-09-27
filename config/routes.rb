@@ -31,10 +31,18 @@ GkoHotelsofstbarthOrg::Application.routes.draw do
       resources :areas
       resources :pictos
       resources :hotel_lists do
-        resources :hotels
+        resources :hotels do
+          collection do
+            get :selected
+          end
+        end
       end
       resources :realty_agency_lists do
-        resources :realty_agencies
+        resources :realty_agencies do
+          collection do
+            get :selected
+          end
+        end
       end
     end
   end

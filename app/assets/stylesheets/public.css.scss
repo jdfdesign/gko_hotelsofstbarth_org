@@ -331,6 +331,9 @@ aside {
 		}
 	}
 }
+#copyright-container {
+	background: $footerBackground;
+}
 /*-----------------------------------------
  RESPONSIVE
 ----------------------------------------- */
@@ -391,19 +394,38 @@ aside {
 	 FOOTER
 	----------------------------------------- */
 	#footer-container {
-	
-		ul.nav {
+		
+		ul.nav.nav-menu {
+			li > a  {
+				font-weight: normal;
+				padding: 0 12px;
+				margin: 0;
+			}
+			li:first-child > a {
+				padding: 0 12px 0 0;
+			}
+		}
+		
+		ul.nav.nav-members {
 			li {
 				float: none;
+				font-weight: normal;
+				font-style: italic;
+				padding: 0;
+				margin: 0;
 			}
 		}
 
 		.nav > li > a  {
 			font-weight: normal;
 			font-style: italic;
-			padding: 0 12px;
+			padding: 0;
 			margin: 0;
 		}
+	}
+	#footer,
+	#footer-members {
+		padding: $baseLineHeight 0;
 	}
 	
 } 
