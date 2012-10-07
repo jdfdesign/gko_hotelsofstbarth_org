@@ -35,7 +35,7 @@ $purple:                #7a43b6;// !default;
 
 // Scaffolding
 // -------------------------
-$bodyBackground:        $white;
+$bodyBackground:        #E6E6E6;
 $textColor:             $grayDark;
 
 
@@ -214,7 +214,7 @@ $footerLinkBackgroundHover:       $navbarLinkBackgroundHover;// !default;
 ----------------------------------------- */
 body {
 	border-top: 8px solid $blueAlt;
-	background: #F1EFEB image-url("images/noise.png") top left repeat;
+	background: #E6E6E6;
 }
 .row-fluid {
 	max-width: 780px;
@@ -230,7 +230,7 @@ body {
 }
 .navbar .brand {
 	float: left;
-	margin: 12px 0 12px 0;
+	margin: 0px 0 36px 0;
 	min-width: 82px;
 	min-height: 85px;
 	padding: 0 0 0 98px;
@@ -246,7 +246,15 @@ body {
 		letter-spacing: 1px; 
 	}
 }
-
+.navbar-inner {
+	@include border-radius(0);
+}
+.navbar .nav#locales {
+	margin: 0;
+}
+.navbar .nav#locales > li > a {
+	padding: 4px 8px;
+}
 #site-subtitle {
 	position: absolute;
 	left: 97px;
@@ -268,6 +276,7 @@ body {
 	@include buttonBackground($blueAlt, darken($blueAlt, 10%));
 	@include border-radius(4px 4px 0 0);
 	border-bottom: none;
+	margin-top: 24px;
 }
 .navbar .btn-navbar:hover {
 	color: $white;	
@@ -276,18 +285,29 @@ body {
 .navbar .btn-navbar.active,
 .navbar .btn-navbar:active {
   color: $white;
+  
 }
 aside {
 	h4 {
 		color: $darkBrown;
 		text-transform: uppercase;
+		font-weight: bold;
+		border-top: 1px solid $darkBrown;
+		padding: 12px 0 8px 0;
 	}
 }
+
+#footer-container {
+	ul.nav.nav-menu {
+		@include center-nav();
+		padding-bottom: 8px;
+		border-bottom: 1px solid $blueAlt;
+	}
+}	
 /*-----------------------------------------
  GRID
 ----------------------------------------- */
 .grid > li {
-
 	background: #FDFDFD;
 	padding: 18px;
 	.thumbnail {
@@ -335,6 +355,19 @@ aside {
 	background: $footerBackground;
 }
 /*-----------------------------------------
+ ASIDE
+----------------------------------------- */
+aside#sidebar .grid > li {
+	.thumbnail {
+		margin-bottom: 0;
+		.title {
+			font-size: 16px;
+			line-height: 18px;
+			padding-bottom: 6px;
+		}
+	}
+}
+/*-----------------------------------------
  RESPONSIVE
 ----------------------------------------- */
 @import "twitter/bootstrap/responsive";
@@ -365,18 +398,51 @@ aside {
 	}
 }
 @media (max-width: 979px) {
-	.navbar .brand {
-		margin: 12px 0 12px 0;
-		padding: 0 0 0 98px;
+	.header-nav {
+		padding-top: 24px;
+	}
+	#site-subtitle {
+		top: 85px;
 	}
 	
+	.navbar .brand {
+		margin: 0 0 12px 0;
+		padding: 0 0 0 98px;
+	}
+	.nav-collapse {
+		
+		nav {
+			clear: both;
+			
+		}
+		.nav > li > a {
+			text-transform: uppercase;
+			border-bottom: 1px solid lighten($darkBrown, 5%);
+		}
+		.dropdown-menu li {
+		  	margin-left: 24px;
+			border-bottom: 1px solid lighten($darkBrown, 5%);
+		}
+		.dropdown .caret {
+			display: none;
+		}
+		.nav > li > a,
+		.dropdown-menu a {
+		  font-weight: normal;
+		  @include border-radius(0);
+		}
+		.dropdown-menu a:hover {
+		  	background-color: $navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from .active
+			color: $navbarLinkColorHover;
+		}
+	}
 }
 @media (min-width: 980px) {
+	
 	/*-----------------------------------------
 	 HEADER
 	----------------------------------------- */ 
-
-	/* Main menu settings */
+	
 	nav#primary-menu {
 		@include clearfix;
 		margin-top: 48px;
@@ -388,6 +454,10 @@ aside {
 		ul.nav > li > a {
 			@include transition(all 0.3s ease-in-out);
 		}
+		
+		.dropdown-menu {
+		 margin-top: -2px;	
+		}
 	}
 
 	/*-----------------------------------------
@@ -396,6 +466,9 @@ aside {
 	#footer-container {
 		
 		ul.nav.nav-menu {
+			@include center-nav();
+			padding-bottom: 8px;
+			border-bottom: 1px solid $blueAlt;
 			li > a  {
 				font-weight: normal;
 				padding: 0 12px;
@@ -428,4 +501,9 @@ aside {
 		padding: $baseLineHeight 0;
 	}
 	
+	aside {
+		select {
+			max-width: 180px;
+		}
+	}
 } 

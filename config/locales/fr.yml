@@ -7,6 +7,16 @@ fr:
     rates_policy_title: "Politique tarifaire"
     cancellation_policy_title: "Politique d'annulation"
     main_contact_title: "Contact principal"
+    search_member_by_area: "Recherche par quartier"
+    search_member_by_title: "Accès direct à un membre"
+    latest_news: "Dernières actualités"
+    contact_association: "Contacter l'association"
+  helpers:
+    select:
+      area:
+        prompt: "Choisissez un quartier"
+      member:
+        prompt: "Choisissez un membre"
   admin:
     hotel_lists:
       help: "Créer une liste d'hôtel"

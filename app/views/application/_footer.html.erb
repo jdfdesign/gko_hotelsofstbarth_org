@@ -1,5 +1,6 @@
 <!-- Footer
 ================================================== -->
+<% @members ||= site.members.live.order(:position) %>
  <footer id='footer-container' class='container-fluid hide-on-print'>
    <div id='footer' class='row-fluid'>
      <div class="span12">
@@ -7,8 +8,8 @@
 		<%= render_menu('tools') %>
      </div>
    </div>
-   <div id="footer-members" class='row-fluid'>
-   <% site.members.sort_by(&:title).in_groups(3) do |group| %>
+   <div id="footer-members" class='row-fluid visible-desktop'>
+   <% @members.in_groups(3) do |group| %>
 	 <div class="span4">
 		<ul class='nav nav-members'>
 		<% group.each do |m| %>

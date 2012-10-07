@@ -1,0 +1,43 @@
+<% content_for :sidebar do %>
+ <div class="partial filter hide-on-print">
+   <h4><%= t(:"custom.contact_association") %></h4>
+   <p><address><strong>cell.</strong>+590(0)690 56 10 03<br><%= mail_to("contact@hotelsofstbarths.org", "contact@hotelsofstbarths.org", :encode => "javascript")%></address></p>
+  <%= simple_form_for(:search, 
+	:url => member_list_path(site.member_lists.first), 
+	:method => :get,
+	:html => {:class => "filter member"}) do |f| %>
+	<h4><%= t(:"custom.search_member_by_title") %></h4>
+	<div class='control-group'>
+	  <%= f.select :with_title, 
+	    options_from_collection_for_select(site.members.live.order('content_translations.title'), :id, :title, params[:with_title]), 
+	    :prompt => t(:'helpers.select.member.prompt'),
+	    :label => false %>
+	</div>
+  <% end %>
+  <%= simple_form_for(:search, 
+	:url => member_list_path(site.member_lists.first), 
+	:method => :get,
+	:html => {:class => "filter member"}) do |f| %>
+	<h4><%= t(:"custom.search_member_by_area") %></h4>
+	<div class='control-group'>
+	  <%= f.select :in_area, 
+	    options_from_collection_for_select(site.areas.all, :id, :name, params[:in_area]), 
+	    :prompt => t(:'helpers.select.area.prompt'),
+	    :label => false %>
+	</div>
+  <% end %>
+
+ <h4><%= t(:"custom.latest_news").html_safe %></h4>
+ <%= grid_tag(1) do %>
+  <% site.posts.recent(2).each do |post| %>
+	<%= grid_item_tag_for(post) do %>
+		<%= render_record_title(post) %>
+		<%= render_record_description(post, 90) %>
+		<%= render_record_link(post) %>
+	<% end %>
+  <% end %>	
+<% end %>
+</div>
+<% end %>
+<%= render_slideshow_for(resource) %>
+<%= render_html_text(resource.body) %>

@@ -1,0 +1,30 @@
+<article>
+<%= page_title(resource.title) %>
+<%= render_slideshow_for(resource) %>
+<% unless resource.body.blank? %>
+<h3><%= t("custom.body_title") %></h3>
+<%= render_html_text(resource.body) %>
+<% end %>
+
+<% unless resource.services.blank? %>
+<h3><%= t("custom.services_title") %></h3>
+<%= render_html_text(resource.services) %>
+<% end %>
+<% unless resource.rates.blank? %>
+<h3><%= t("custom.rates_title") %></h3>
+<%= render_html_text(resource.rates) %>
+<% end %>
+<% unless resource.rates_policy.blank? %>
+<h3><%= t("custom.rates_policy_title") %></h3>
+<%= render_html_text(resource.rates_policy) %>
+<% end %>
+<% unless resource.cancellation_policy.blank? %>
+<h3><%= t("custom.cancellation_policy_title") %></h3>
+<%= render_html_text(resource.cancellation_policy) %>
+<% end %>
+<% unless resource.main_contact.blank? %>
+<h3><%= t("custom.main_contact_title") %></h3>
+<%= render_html_text(resource.main_contact) %>
+<% end %>
+<%#= render_next_previous %>
+</article>

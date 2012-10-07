@@ -1,0 +1,11 @@
+<% @pictos = site.pictos %>
+<%- unless @pictos.empty? -%>
+    <%= f.association :pictos,
+                      :collection => @pictos,
+                      :label_method => :name,
+                      :as => :check_boxes %>
+<%- else -%>
+	<%= content_tag_for_empty_collection do %>
+		<%= t("admin.members.no_pictos") %>
+	<% end %>
+<%- end -%>

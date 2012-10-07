@@ -16,7 +16,7 @@ class Picto < ActiveRecord::Base
     end
   end
 
-  delegate :size, :mime_type, :url, :width, :height, :to => :image
+  delegate :name, :size, :mime_type, :url, :width, :height, :to => :image
 
   has_many :picto_assignments, :as => :pictable, :dependent => :destroy
   
@@ -33,6 +33,6 @@ class Picto < ActiveRecord::Base
 
   validates_property :width,
                      :of => :image, :in => (100..1000),
-                     :message => "bad size "
+                     :message => "bad size"
 end
 
