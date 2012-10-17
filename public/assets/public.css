@@ -6060,10 +6060,9 @@ footer .nav > li > a:hover {
 /* line 215, ../../app/assets/stylesheets/public.css.scss */
 body {
   border-top: 8px solid #4fadc1;
-  background: #E6E6E6;
 }
 
-/* line 219, ../../app/assets/stylesheets/public.css.scss */
+/* line 218, ../../app/assets/stylesheets/public.css.scss */
 .row-fluid {
   max-width: 780px;
   -webkit-box-sizing: border-box;
@@ -6075,18 +6074,17 @@ body {
   margin-right: auto;
 }
 
-/* line 224, ../../app/assets/stylesheets/public.css.scss */
+/* line 223, ../../app/assets/stylesheets/public.css.scss */
 #footer-container {
   border-top: 4px solid #4fadc1;
-  background-color: #201901;
 }
 
-/* line 228, ../../app/assets/stylesheets/public.css.scss */
+/* line 226, ../../app/assets/stylesheets/public.css.scss */
 .header-nav {
   position: relative;
 }
 
-/* line 231, ../../app/assets/stylesheets/public.css.scss */
+/* line 229, ../../app/assets/stylesheets/public.css.scss */
 .navbar .brand {
   float: left;
   margin: 0px 0 36px 0;
@@ -6096,7 +6094,7 @@ body {
   background: transparent url(/assets/logo.png) left center no-repeat;
   cursor: pointer;
 }
-/* line 239, ../../app/assets/stylesheets/public.css.scss */
+/* line 237, ../../app/assets/stylesheets/public.css.scss */
 .navbar .brand a {
   text-align: left;
   text-decoration: none;
@@ -6107,31 +6105,31 @@ body {
   letter-spacing: 1px;
 }
 
-/* line 249, ../../app/assets/stylesheets/public.css.scss */
+/* line 247, ../../app/assets/stylesheets/public.css.scss */
 .navbar-inner {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
 
-/* line 252, ../../app/assets/stylesheets/public.css.scss */
+/* line 250, ../../app/assets/stylesheets/public.css.scss */
 .navbar .nav#locales {
   margin: 0;
 }
 
-/* line 255, ../../app/assets/stylesheets/public.css.scss */
+/* line 253, ../../app/assets/stylesheets/public.css.scss */
 .navbar .nav#locales > li > a {
   padding: 4px 8px;
 }
 
-/* line 258, ../../app/assets/stylesheets/public.css.scss */
+/* line 256, ../../app/assets/stylesheets/public.css.scss */
 #site-subtitle {
   position: absolute;
   left: 97px;
   top: 65px;
 }
 
-/* line 264, ../../app/assets/stylesheets/public.css.scss */
+/* line 262, ../../app/assets/stylesheets/public.css.scss */
 .page-title {
   margin: 36px 0;
   color: #201901;
@@ -6140,7 +6138,7 @@ body {
 /*-----------------------------------------
  HEADER 
 ----------------------------------------- */
-/* line 271, ../../app/assets/stylesheets/public.css.scss */
+/* line 269, ../../app/assets/stylesheets/public.css.scss */
 .navbar .btn-navbar {
   clear: both;
   font-weight: normal;
@@ -6177,18 +6175,18 @@ body {
   /* IE6-9 */
 }
 
-/* line 281, ../../app/assets/stylesheets/public.css.scss */
+/* line 279, ../../app/assets/stylesheets/public.css.scss */
 .navbar .btn-navbar:hover {
   color: white;
 }
 
-/* line 286, ../../app/assets/stylesheets/public.css.scss */
+/* line 284, ../../app/assets/stylesheets/public.css.scss */
 .navbar .btn-navbar.active,
 .navbar .btn-navbar:active {
   color: white;
 }
 
-/* line 291, ../../app/assets/stylesheets/public.css.scss */
+/* line 289, ../../app/assets/stylesheets/public.css.scss */
 aside h4 {
   color: #201901;
   text-transform: uppercase;
@@ -6197,7 +6195,7 @@ aside h4 {
   padding: 12px 0 8px 0;
 }
 
-/* line 301, ../../app/assets/stylesheets/public.css.scss */
+/* line 299, ../../app/assets/stylesheets/public.css.scss */
 #footer-container ul.nav.nav-menu {
   *zoom: 1;
   text-align: center;
@@ -6239,12 +6237,12 @@ aside h4 {
 /*-----------------------------------------
  GRID
 ----------------------------------------- */
-/* line 310, ../../app/assets/stylesheets/public.css.scss */
+/* line 308, ../../app/assets/stylesheets/public.css.scss */
 .grid > li {
   background: #FDFDFD;
   padding: 18px;
 }
-/* line 313, ../../app/assets/stylesheets/public.css.scss */
+/* line 311, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail {
   margin-bottom: 36px;
   box-shadow: none;
@@ -6252,17 +6250,17 @@ aside h4 {
   line-height: 1.5;
   padding: 0;
 }
-/* line 319, ../../app/assets/stylesheets/public.css.scss */
+/* line 317, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .title {
   line-height: 24px;
   padding-bottom: 9px;
 }
-/* line 324, ../../app/assets/stylesheets/public.css.scss */
+/* line 322, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .image {
   float: left;
   width: 25%;
 }
-/* line 328, ../../app/assets/stylesheets/public.css.scss */
+/* line 326, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .caption {
   float: left;
   position: relative;
@@ -6270,7 +6268,7 @@ aside h4 {
   padding: 0;
   margin-left: 12px;
 }
-/* line 338, ../../app/assets/stylesheets/public.css.scss */
+/* line 336, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .links a {
   border: none;
   background: #4fadc1;
@@ -6287,13 +6285,13 @@ aside h4 {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 348, ../../app/assets/stylesheets/public.css.scss */
+/* line 346, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail .links a:hover {
   background: #3a91a3;
   text-shadow: none;
 }
 
-/* line 354, ../../app/assets/stylesheets/public.css.scss */
+/* line 352, ../../app/assets/stylesheets/public.css.scss */
 #copyright-container {
   background: #201901;
 }
@@ -6301,11 +6299,11 @@ aside h4 {
 /*-----------------------------------------
  ASIDE
 ----------------------------------------- */
-/* line 361, ../../app/assets/stylesheets/public.css.scss */
+/* line 359, ../../app/assets/stylesheets/public.css.scss */
 aside#sidebar .grid > li .thumbnail {
   margin-bottom: 0;
 }
-/* line 363, ../../app/assets/stylesheets/public.css.scss */
+/* line 361, ../../app/assets/stylesheets/public.css.scss */
 aside#sidebar .grid > li .thumbnail .title {
   font-size: 16px;
   line-height: 18px;
@@ -7422,13 +7420,13 @@ aside#sidebar .grid > li .thumbnail .title {
   }
 }
 @media (max-width: 480px) {
-  /* line 377, ../../app/assets/stylesheets/public.css.scss */
+  /* line 375, ../../app/assets/stylesheets/public.css.scss */
   .navbar .brand {
     font-size: 16px;
   }
 }
 @media (max-width: 767px) {
-  /* line 382, ../../app/assets/stylesheets/public.css.scss */
+  /* line 380, ../../app/assets/stylesheets/public.css.scss */
   .navbar-inner {
     border-bottom: 2px solid #4fadc1;
     -webkit-border-radius: 0;
@@ -7436,59 +7434,59 @@ aside#sidebar .grid > li .thumbnail .title {
     border-radius: 0;
   }
 
-  /* line 387, ../../app/assets/stylesheets/public.css.scss */
+  /* line 385, ../../app/assets/stylesheets/public.css.scss */
   .heading {
     padding: 40px 0 30px 0;
   }
 
-  /* line 391, ../../app/assets/stylesheets/public.css.scss */
+  /* line 389, ../../app/assets/stylesheets/public.css.scss */
   body {
     padding-left: 0;
     padding-right: 0;
   }
 
-  /* line 395, ../../app/assets/stylesheets/public.css.scss */
+  /* line 393, ../../app/assets/stylesheets/public.css.scss */
   .container-fluid {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 @media (max-width: 979px) {
-  /* line 401, ../../app/assets/stylesheets/public.css.scss */
+  /* line 399, ../../app/assets/stylesheets/public.css.scss */
   .header-nav {
     padding-top: 24px;
   }
 
-  /* line 404, ../../app/assets/stylesheets/public.css.scss */
+  /* line 402, ../../app/assets/stylesheets/public.css.scss */
   #site-subtitle {
     top: 85px;
   }
 
-  /* line 408, ../../app/assets/stylesheets/public.css.scss */
+  /* line 406, ../../app/assets/stylesheets/public.css.scss */
   .navbar .brand {
     margin: 0 0 12px 0;
     padding: 0 0 0 98px;
   }
 
-  /* line 414, ../../app/assets/stylesheets/public.css.scss */
+  /* line 412, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse nav {
     clear: both;
   }
-  /* line 418, ../../app/assets/stylesheets/public.css.scss */
+  /* line 416, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .nav > li > a {
     text-transform: uppercase;
     border-bottom: 1px solid #392c02;
   }
-  /* line 422, ../../app/assets/stylesheets/public.css.scss */
+  /* line 420, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .dropdown-menu li {
     margin-left: 24px;
     border-bottom: 1px solid #392c02;
   }
-  /* line 426, ../../app/assets/stylesheets/public.css.scss */
+  /* line 424, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .dropdown .caret {
     display: none;
   }
-  /* line 430, ../../app/assets/stylesheets/public.css.scss */
+  /* line 428, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .nav > li > a,
   .nav-collapse .dropdown-menu a {
     font-weight: normal;
@@ -7496,7 +7494,7 @@ aside#sidebar .grid > li .thumbnail .title {
     -moz-border-radius: 0;
     border-radius: 0;
   }
-  /* line 434, ../../app/assets/stylesheets/public.css.scss */
+  /* line 432, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .dropdown-menu a:hover {
     background-color: transparent;
     color: white;
@@ -7506,7 +7504,7 @@ aside#sidebar .grid > li .thumbnail .title {
   /*-----------------------------------------
    HEADER
   ----------------------------------------- */
-  /* line 446, ../../app/assets/stylesheets/public.css.scss */
+  /* line 444, ../../app/assets/stylesheets/public.css.scss */
   nav#primary-menu {
     *zoom: 1;
     margin-top: 48px;
@@ -7520,7 +7518,7 @@ aside#sidebar .grid > li .thumbnail .title {
   nav#primary-menu:after {
     clear: both;
   }
-  /* line 450, ../../app/assets/stylesheets/public.css.scss */
+  /* line 448, ../../app/assets/stylesheets/public.css.scss */
   nav#primary-menu ul.nav {
     *zoom: 1;
     text-align: center;
@@ -7557,7 +7555,7 @@ aside#sidebar .grid > li .thumbnail .title {
     margin-right: 2px;
     line-height: 14px;
   }
-  /* line 454, ../../app/assets/stylesheets/public.css.scss */
+  /* line 452, ../../app/assets/stylesheets/public.css.scss */
   nav#primary-menu ul.nav > li > a {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -7565,7 +7563,7 @@ aside#sidebar .grid > li .thumbnail .title {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-  /* line 458, ../../app/assets/stylesheets/public.css.scss */
+  /* line 456, ../../app/assets/stylesheets/public.css.scss */
   nav#primary-menu .dropdown-menu {
     margin-top: -2px;
   }
@@ -7573,7 +7571,7 @@ aside#sidebar .grid > li .thumbnail .title {
   /*-----------------------------------------
    FOOTER
   ----------------------------------------- */
-  /* line 468, ../../app/assets/stylesheets/public.css.scss */
+  /* line 466, ../../app/assets/stylesheets/public.css.scss */
   #footer-container ul.nav.nav-menu {
     *zoom: 1;
     text-align: center;
@@ -7611,17 +7609,17 @@ aside#sidebar .grid > li .thumbnail .title {
     margin-right: 2px;
     line-height: 14px;
   }
-  /* line 472, ../../app/assets/stylesheets/public.css.scss */
+  /* line 470, ../../app/assets/stylesheets/public.css.scss */
   #footer-container ul.nav.nav-menu li > a {
     font-weight: normal;
     padding: 0 12px;
     margin: 0;
   }
-  /* line 477, ../../app/assets/stylesheets/public.css.scss */
+  /* line 475, ../../app/assets/stylesheets/public.css.scss */
   #footer-container ul.nav.nav-menu li:first-child > a {
     padding: 0 12px 0 0;
   }
-  /* line 483, ../../app/assets/stylesheets/public.css.scss */
+  /* line 481, ../../app/assets/stylesheets/public.css.scss */
   #footer-container ul.nav.nav-members li {
     float: none;
     font-weight: normal;
@@ -7629,7 +7627,7 @@ aside#sidebar .grid > li .thumbnail .title {
     padding: 0;
     margin: 0;
   }
-  /* line 492, ../../app/assets/stylesheets/public.css.scss */
+  /* line 490, ../../app/assets/stylesheets/public.css.scss */
   #footer-container .nav > li > a {
     font-weight: normal;
     font-style: italic;
@@ -7637,13 +7635,13 @@ aside#sidebar .grid > li .thumbnail .title {
     margin: 0;
   }
 
-  /* line 500, ../../app/assets/stylesheets/public.css.scss */
+  /* line 498, ../../app/assets/stylesheets/public.css.scss */
   #footer,
   #footer-members {
     padding: 18px 0;
   }
 
-  /* line 505, ../../app/assets/stylesheets/public.css.scss */
+  /* line 503, ../../app/assets/stylesheets/public.css.scss */
   aside select {
     max-width: 180px;
   }
