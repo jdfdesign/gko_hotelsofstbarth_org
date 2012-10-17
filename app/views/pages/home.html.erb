@@ -1,19 +1,10 @@
 <% content_for :sidebar do %>
  <div class="partial filter hide-on-print">
    <h4><%= t(:"custom.contact_association") %></h4>
-   <p><address><strong>cell.</strong>+590(0)690 56 10 03<br><%= mail_to("contact@hotelsofstbarths.org", "contact@hotelsofstbarths.org", :encode => "javascript")%></address></p>
-  <%= simple_form_for(:search, 
-	:url => member_list_path(site.member_lists.first), 
-	:method => :get,
-	:html => {:class => "filter member"}) do |f| %>
+   <p><address><strong>cell.</strong>+590(0)690 56 10 03<br><%= mail_to("contact@hotelsofstbarth.org", "contact@hotelsofstbarths.org", :encode => "javascript")%></address></p>
 	<h4><%= t(:"custom.search_member_by_title") %></h4>
-	<div class='control-group'>
-	  <%= f.select :with_title, 
-	    options_from_collection_for_select(site.members.live.order('content_translations.title'), :id, :title, params[:with_title]), 
-	    :prompt => t(:'helpers.select.member.prompt'),
-	    :label => false %>
-	</div>
-  <% end %>
+	<%= collection_select "member", "id", site.members.live.order('content_translations.title'), :public_url, :title, {:prompt => t(:'helpers.select.member.prompt') } %>
+
   <%= simple_form_for(:search, 
 	:url => member_list_path(site.member_lists.first), 
 	:method => :get,
@@ -25,6 +16,7 @@
 	    :prompt => t(:'helpers.select.area.prompt'),
 	    :label => false %>
 	</div>
+	<%= f.button(:submit) %>
   <% end %>
 
  <h4><%= t(:"custom.latest_news").html_safe %></h4>

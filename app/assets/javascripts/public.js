@@ -8,6 +8,20 @@ var Site = {
 		$window = $(window);
 		Carousel.addTheme();
 		Carousel.init();
+		Site.setEvents();
+	},
+	
+	setEvents: function() {
+		$('select#member_id').change(function(){
+		    var result = $(this).val()
+			document.location.href = result;
+		});
+	/*	$("#search_with_title").change(function(e) {
+			$(this).closest('form').submit();
+		});
+		$("#search_with_title").change(function(e) {
+			$(this).closest('form').submit();
+		}); */
 	}
 }
 
