@@ -1,0 +1,9 @@
+<%= content_tag_for(:li, picto, :class => "span3") do %>
+  <div class="thumbnail">
+	<%= image_tag(picto.image('x120').url) %>
+    <div class='btn-group actions'>
+      <%= icon_to_edit(edit_admin_site_picto_path(current_site, picto)) %>
+      <%= icon_to_destroy(admin_site_picto_path(current_site, picto), :remote => true) %>
+    </div>
+  </div>
+<% end %>

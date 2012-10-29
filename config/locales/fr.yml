@@ -1,5 +1,6 @@
 fr:
   custom:
+    area: Quartier
     body_title: "Description"
     services_title: "Services"
     amenities_title: "Equipements et services"
@@ -18,54 +19,40 @@ fr:
       member:
         prompt: "Choisissez un membre"
   admin:
-    hotel_lists:
-      help: "Créer une liste d'hôtel"
+    member_lists:
+      help: "Créer une liste de membres"
       actions:
-          new: Ajouter une nouvelle liste d'hôtel
-          destroy: Supprimer cette liste d'hôtel
-          edit: Modifier cette liste d'hôtel
-          index: Liste des hôtels
+          new: Ajouter une nouvelle liste de membre
+          destroy: Supprimer cette liste de membre
+          edit: Modifier cette liste de membre
+          index: Liste des membres
           view: Voir la page publique
       titles:
-          new: Ajout d'une nouvelle liste d'hôtel
-          index: Liste des hôtels
-          edit: Modification d'une liste d'hôtel 
+          new: Ajout d'une nouvelle liste de membre
+          index: Liste des membres
+          edit: Modification d'une liste de membre 
           
-    hotels:
-      help: "Créer un hôtel"
+    members:
+      help: "Créer un membre"
       actions:
-          new: Ajouter un hôtel
-          destroy: Supprimer cet hôtel
-          edit: Modifier cet hôtel
-          index: Liste des hôtels
+          new: Ajouter un membre
+          destroy: Supprimer ce membre
+          edit: Modifier ce membre
+          index: Liste des membres
           view: Voir la page publique
       titles:
-          new: Ajout d'un hôtel
-          index: Liste des hôtels
-          edit: Modification d'un hôtel
-          
-    realty_agency_lists:
-      help: "Créer une liste d'agences immobilière"
+          new: Ajout d'un membre
+          index: Liste des membres
+          edit: Modification d'un membre
+    pictos:
+      help: "Créer un picto"
       actions:
-          new: Ajouter une nouvelle liste d'agence immobilière
-          destroy: Supprimer cette liste d'agence immobilière
-          edit: Modifier cette liste d'agences immobilière
-          index: Liste des agences immobilière
-          view: Voir la page publique
+          new: Ajouter un picto
+          destroy: Supprimer ce picto
+          edit: Modifier ce picto
+          index: Liste des pictos
       titles:
-          new: Ajout d'une nouvelle liste d'agences immobilière
-          index: Liste des agences immobilière
-          edit: Modification d'une liste d'agences immobilière
-
-    realty_agencies:
-      help: "Créer une agence immobilière"
-      actions:
-          new: Ajouter une agence immobilière
-          destroy: Supprimer cette agence immobilière
-          edit: Modifier cette agence immobilière
-          index: Liste des agences immobilière
-          view: Voir la page publique
-      titles:
-          new: Ajout d'une agence immobilière
-          index: Liste des agences immobilière
-          edit: Modification d'une agence immobilière        
+          new: Ajout d'un picto
+          index: Liste des pictos
+          edit: Modification d'un picto 
+                

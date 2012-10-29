@@ -293,6 +293,17 @@ aside {
 		border-top: 1px solid $darkBrown;
 		padding: 12px 0 8px 0;
 	}
+	.thumbnails {
+		text-align: center;
+	}
+	.thumbnail {
+		border: none;
+		@include border-radius(0);
+		@include box-shadow(none);
+		img {
+			margin-bottom: $baseLineHeight / 4;
+		}
+	}
 }
 
 #footer-container {

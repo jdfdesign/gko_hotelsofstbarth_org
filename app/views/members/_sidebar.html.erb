@@ -1,13 +1,25 @@
 <% content_for :sidebar do %>
-    <% if resource.map.present? %>
-	 <%= image_tag(resource.map.thumb('x120').url) %>
+<ul class="thumbnails">
+	<% if resource.map.present? %>
+	<li class="span12">
+		<div class="thumbnail">
+		<%= image_tag(resource.map.thumb('x120').url) %>
+		<% if resource.area.present? %>
+		<p><strong><%= t(:area) %>:</strong> <%= resource.area.name %></p>
+		<% end %>
+		</div>
+	</li>
 	<% end %>
 	<% if resource.pictos.any? %>
-	 <% resource.pictos.each do |picto| %>
-		<%= image_tag(picto.image.thumb('x80').url) %>
-	 <% end %>
+		<% resource.pictos.each do |picto| %>
+		<li class="span12">
+			<div class="thumbnail">
+				<%= image_tag(picto.image.thumb('x80').url) %>
+			</div>
+		</li>
+		<% end %>
 	<% end %>
-	
+</ul>
     <%= render_parent_categories %>
     <%= render_parent_stickers %>
 <% end %>

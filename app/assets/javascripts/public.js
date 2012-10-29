@@ -31,13 +31,13 @@ var Carousel = {
 			$(".galleria").galleria({
 				autoplay: true,
 				responsive: true,
-				height: .55,
+				height: .65,
 				imageCrop: 'landscape',
 				transition: 'slide',
 				thumbMargin: 10,
 				showCounter: false,
 				showInfo: false,
-				thumbnails: true
+				thumbnails: 'empty'
 			})
 		}
 	},

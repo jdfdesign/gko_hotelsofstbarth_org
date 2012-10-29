@@ -1,5 +1,6 @@
-fr:
+en:
   custom:
+    area: Area      
     body_title: "Description"
     services_title: "Services"
     amenities_title: "Amenities & services"
@@ -11,3 +12,9 @@ fr:
     search_member_by_title: "Direct access to members"
     latest_news: "Latest news"
     contact_association: "Contact the association"
+helpers:
+  select:
+    area:
+      prompt: "Select an area"
+    member:
+      prompt: "Select a member"

@@ -1,0 +1,4 @@
+<ul id='pictos-list' class="thumbnails" data-toggle="modal-gallery" data-target="#modal-gallery" data-selector="a.gallery-item">
+  <%= render(@pictos) || render("admin/shared/empty") %>
+</ul>
+<%= render_pagination(@pictos) %>

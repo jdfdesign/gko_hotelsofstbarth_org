@@ -1,7 +1,7 @@
 <% content_for :sidebar do %>
  <div class="partial filter hide-on-print">
    <h4><%= t(:"custom.contact_association") %></h4>
-   <p><address><strong>cell.</strong>+590(0)690 56 10 03<br><%= mail_to("contact@hotelsofstbarth.org", "contact@hotelsofstbarths.org", :encode => "javascript")%></address></p>
+   <p><address><strong>cell.</strong>+590(0)690 56 10 03<br><%= mail_to("contact@hotelsofstbarth.org", "contact@hotelsofstbarth.org", :encode => "javascript")%></address></p>
 	<h4><%= t(:"custom.search_member_by_title") %></h4>
 	<%= collection_select "member", "id", site.members.live.order('content_translations.title'), :public_url, :title, {:prompt => t(:'helpers.select.member.prompt') } %>
 
