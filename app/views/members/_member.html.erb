@@ -1,8 +1,10 @@
-<%= grid_item_tag_for(member) do %>
-	<%= render_record_thumb(member) %>
-	<%= grid_item_caption_tag do %>
-		<%= render_record_title(member) %>
-		<%= render_record_description(member) %>
-		<%= render_record_link(member) %>
+<% cache [action_name, member.site, I18n.locale, member.section, member] do %>
+	<%= grid_item_tag_for(member) do %>
+		<%= render_record_thumb(member) %>
+		<%= grid_item_caption_tag do %>
+			<%= render_record_title(member) %>
+			<%= render_record_description(member) %>
+			<%= render_record_link(member) %>
+		<% end %>
 	<% end %>
 <% end if member %>
