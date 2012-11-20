@@ -271,7 +271,7 @@ body {
 	font-weight: normal;
  	text-shadow: 0px 1px 0 black;
 	color: $white;
-	@include buttonBackground($blueAlt, darken($blueAlt, 10%));
+	@include button-background($blueAlt, darken($blueAlt, 10%));
 	@include border-radius(4px 4px 0 0);
 	border-bottom: none;
 	margin-top: 24px;

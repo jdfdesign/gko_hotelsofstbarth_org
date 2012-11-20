@@ -1,6 +1,6 @@
 class PictoAssignment < ActiveRecord::Base
   belongs_to :attachable, :polymorphic => true, :touch => true
-  belongs_to :pictable, :polymorphic => true
+  belongs_to :pictable, :polymorphic => true, :touch => true
   default_scope :order => 'picto_assignments.position'
   acts_as_list :scope => [:attachable_id, :attachable_type]
   validates_presence_of :attachable_id, :attachable_type, :pictable_id, :pictable_type

@@ -16,12 +16,6 @@ var Site = {
 		    var result = $(this).val()
 			document.location.href = result;
 		});
-	/*	$("#search_with_title").change(function(e) {
-			$(this).closest('form').submit();
-		});
-		$("#search_with_title").change(function(e) {
-			$(this).closest('form').submit();
-		}); */
 	}
 }
 
