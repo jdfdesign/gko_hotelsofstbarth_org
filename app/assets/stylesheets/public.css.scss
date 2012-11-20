@@ -225,6 +225,7 @@ body {
 }
 .header-nav {
 	position: relative; 
+	
 }
 .navbar .brand {
 	float: left;
@@ -249,6 +250,7 @@ body {
 }
 .navbar .nav#locales {
 	margin: 0;
+	float: right;
 }
 .navbar .nav#locales > li > a {
 	padding: 4px 8px;
@@ -326,8 +328,9 @@ aside {
 		line-height: 1.5;
 		padding: 0;
 		.title {
-			line-height: 24px;
+			line-height: 26px;
 			padding-bottom: 9px;
+			font-size: 22px;
 		}
 		
 		.image {
