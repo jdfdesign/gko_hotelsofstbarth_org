@@ -305,6 +305,12 @@ aside {
 		img {
 			margin-bottom: $baseLineHeight / 4;
 		}
+		.title {
+			margin-bottom: 0;
+		}
+		p.description {
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -370,12 +376,13 @@ aside {
  ASIDE
 ----------------------------------------- */
 aside#sidebar .grid > li {
+	padding: 4px;
 	.thumbnail {
 		margin-bottom: 0;
 		.title {
 			font-size: 16px;
 			line-height: 18px;
-			padding-bottom: 6px;
+			//padding-bottom: 6px;
 		}
 	}
 }

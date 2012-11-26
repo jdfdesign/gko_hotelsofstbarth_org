@@ -21,7 +21,7 @@
 
  <h4><%= t(:"custom.latest_news").html_safe %></h4>
  <%= grid_tag(1) do %>
-  <% site.posts.recent(2).each do |post| %>
+  <% site.posts.recent(2).order("contents.published_at DESC").each do |post| %>
 	<%= grid_item_tag_for(post) do %>
 		<%= render_record_title(post) %>
 		<%= render_record_description(post, 90) %>
