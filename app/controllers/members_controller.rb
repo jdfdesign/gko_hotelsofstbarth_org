@@ -6,6 +6,6 @@ class MembersController < ContentsController
     
   protected
   def load_resources
-    end_of_association_chain.includes(:images, :meta).published.order('contents.position').with_translations(I18n.locale)
+    end_of_association_chain.includes(:images, :meta, :translations).with_locales(I18n.locale).published.order('contents.position')
   end
 end
