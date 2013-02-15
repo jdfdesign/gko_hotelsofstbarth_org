@@ -203,6 +203,12 @@ $footerLinkBackgroundHover:       $navbarLinkBackgroundHover;// !default;
 @import "twitter/bootstrap";
 @import "gko/public/base";
 @import "galleria";
+
+a:focus,
+.btn:focus {
+  outline: 0;
+}   
+
 /*-----------------------------------------
  GALLERIA
 ----------------------------------------- */

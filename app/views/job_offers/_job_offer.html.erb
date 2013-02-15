@@ -1,0 +1,15 @@
+<%# cache [action_name, job_offer.site, I18n.locale, job_offer.section, job_offer] do %> 
+
+	<%= grid_item_tag_for(job_offer) do %>
+		<%= grid_item_caption_tag do %>
+		<%= content_tag(:h4) do %>
+			<%= "Publié le #{l(job_offer.updated_at, :format => "%e %B %Y")} par #{link_to( job_offer.name,job_offer.member.public_url)}".html_safe %>
+		<% end %>
+		<%= content_tag(:p) do %>
+			<%= job_offer.body %>
+		<% end %>
+		<%= mail_to(job_offer.email, "Répondre à cette annonce par email", :encode => "javascript", :class => :btn) if job_offer.email %>
+		<% "Répondre à cette annonce par téléphone au #{job_offer.phone}" if job_offer.phone %>
+		<% end %>
+	<% end %>
+<%# end if job_offer %>   

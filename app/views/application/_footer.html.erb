@@ -1,23 +1,25 @@
-<!-- Footer
-================================================== -->
-<% @members ||= site.members.live.order(:position) %>
- <footer id='footer-container' class='container-fluid hide-on-print'>
-   <div id='footer' class='row-fluid'>
-     <div class="span12">
-		<%= render_menu('pipe') %>
-		<%= render_menu('tools') %>
-     </div>
-   </div>
-   <div id="footer-members" class='row-fluid visible-desktop'>
-   <% @members.in_groups(3) do |group| %>
-	 <div class="span4">
-		<ul class='nav nav-members'>
-		<% group.each do |m| %>
-		<li><%= link_to m.title, m.public_url if m %></li>
+<% cache([site, I18n.locale, 'footer']) do %>
+	<!-- Footer
+	================================================== -->
+	<% @members ||= site.members.live.order(:position) %>
+	 <footer id='footer-container' class='container-fluid hide-on-print'>
+	   <div id='footer' class='row-fluid'>
+	     <div class="span12">
+			<%= render_menu('pipe') %>
+			<%= render_menu('tools') %>
+	     </div>
+	   </div>
+	   <div id="footer-members" class='row-fluid visible-desktop'>
+	   <% @members.in_groups(3) do |group| %>
+		 <div class="span4">
+			<ul class='nav nav-members'>
+			<% group.each do |m| %>
+			<li><%= link_to m.title, m.public_url if m %></li>
+			<% end %>
+			</ul>
+	     </div>
 		<% end %>
-		</ul>
-     </div>
-	<% end %>
-   </div>
- </footer>
+	   </div>
+	 </footer>
+<% end %>
 

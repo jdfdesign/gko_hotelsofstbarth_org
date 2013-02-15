@@ -1,0 +1,7 @@
+<% cache(["admin", @resource_locale.to_s, record]) do %>
+	<td><%= glink_to(record.name, url_for([:edit, :admin, current_site, parent, record])) %></td>
+	<td><%= record.member.title %></td>
+	<%= content_tag_for_actions do  %>
+		<%= icons_to_actions([:destroy, :edit], record) %>
+	<% end %>
+<% end %>

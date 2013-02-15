@@ -1,4 +1,13 @@
 fr:
+  simple_form:
+    labels:
+      job_request: 
+        name: Nom
+        email: Email
+        phone: Téléphone
+        curriculum: Curriculum( au format PDF)
+        address: Adresse
+        body: Commentaire
   custom:
     area: Quartier
     body_title: "Description"

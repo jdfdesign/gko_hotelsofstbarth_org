@@ -8,6 +8,7 @@ class Member < Content
   
   has_many :picto_assignments, :as => :attachable, :dependent => :destroy
   has_many :pictos, :through => :picto_assignments, :source => :pictable, :source_type => 'Picto'
+  has_many :job_offers, :dependent => :delete_all
   accepts_nested_attributes_for :picto_assignments, :allow_destroy => true
   attr_accessible :picto_assignments_attributes, :pictos_ids_attributes, :picto_ids
   

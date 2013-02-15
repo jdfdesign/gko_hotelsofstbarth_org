@@ -1,4 +1,9 @@
-en:
+en:  
+  simple_form:
+    labels:
+      job_request:  
+        address: Adresse
+        body: Commentaire   
   custom:
     area: Area      
     body_title: "Description"

@@ -19,6 +19,11 @@ cd ~/Github/gko_hotelsofstbarth_org
 bundle exec rake railties:install:migrations
 bundle exec rake db:bootstrap
 
+
+cd ~/Github/gko_hotelsofstbarth_org
+bundle exec rake railties:install:migrations
+bundle exec rake db:migrate
+
 bundle exec rake db:master:create
 bundle exec rake db:load_default 
 bundle exec rake db:load_sample
