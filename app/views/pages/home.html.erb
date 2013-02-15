@@ -1,4 +1,5 @@
-<% content_for :sidebar do %>
+<% content_for :sidebar do %>  
+<% cache([site, I18n.locale, resource, 'sidebar']) do %> 
  <div class="partial filter hide-on-print">
    <h4><%= t(:"custom.contact_association") %></h4>
    <p><address><strong>cell.</strong>+590(0)690 56 10 03<br><%= mail_to("contact@hotelsofstbarth.org", "contact@hotelsofstbarth.org", :encode => "javascript")%></address></p>
@@ -25,11 +26,13 @@
 	<%= grid_item_tag_for(post) do %>
 		<%= render_record_title(post) %>
 		<%= render_record_description(post, 90) %>
-		<%= render_record_link(post) %>
+		<%= render_record_link(post, t("posts.collection.continue", :default => t("read"))) %>
 	<% end %>
   <% end %>	
+<% end %>
 <% end %>
 </div>
 <% end %>
 <%= render_slideshow_for(resource) %>
-<%= render_html_text(resource.body) %>
+<%= render_html_text(resource.body) %>  
+

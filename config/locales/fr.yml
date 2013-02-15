@@ -1,5 +1,6 @@
 fr:
   custom:
+    read: Lire
     area: Quartier
     body_title: "Description"
     services_title: "Services"
@@ -11,8 +12,14 @@ fr:
     search_member_by_area: "Recherche par quartier"
     search_member_by_title: "Accès direct à un membre"
     latest_news: "Dernières actualités"
-    contact_association: "Contacter l'association"
-  helpers:
+    contact_association: "Contacter l'association"   
+  members:
+    collection: 
+      continue: "Lire"
+  helpers: 
+    submit:
+      search:
+          submit: "Rechercher"
     select:
       area:
         prompt: "Choisissez un quartier"

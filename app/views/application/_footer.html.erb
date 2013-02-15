@@ -1,3 +1,4 @@
+<% cache([site, I18n.locale, 'footer']) do %> 
 <!-- Footer
 ================================================== -->
 <% @members ||= site.members.live.order(:position) %>
@@ -19,5 +20,6 @@
      </div>
 	<% end %>
    </div>
- </footer>
+ </footer> 
+<% end %>
 

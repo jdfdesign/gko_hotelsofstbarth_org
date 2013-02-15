@@ -1,3 +1,8 @@
-<%= render_secondary_menu %>
-<%= render_collection_header %>
-<%= render_collection %>
+<% collection_cache do %> 
+	<%= render_collection_header %>
+	<%= render_collection %> 
+<% end %>
+<% content_for :sidebar do %>
+    <%= render_parent_categories %>
+    <%= render_parent_stickers %>
+<% end %> 

@@ -202,11 +202,16 @@ $footerLinkBackgroundHover:       $navbarLinkBackgroundHover;// !default;
 // Import
 @import "twitter/bootstrap";
 @import "gko/public/base";
-@import "galleria";
+@import "flexslider/flexslider";
+
+.btn:focus,
+a:focus {
+  outline: 0;
+}
 /*-----------------------------------------
  GALLERIA
 ----------------------------------------- */
-.galleria {
+.flexslider {
 	margin-bottom: $baseLineHeight*2;
 }
 /*-----------------------------------------
@@ -397,7 +402,10 @@ aside#sidebar .grid > li {
 		font-size: 16px;
 	}
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) { 
+	#site-subtitle {
+		display: none;
+	}
 	.navbar-inner {
 		border-bottom: 2px solid $blueAlt;
 		@include border-radius(0);

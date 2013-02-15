@@ -1,5 +1,6 @@
 en:
-  custom:
+  custom:  
+    read: Read
     area: Area      
     body_title: "Description"
     services_title: "Services"
@@ -11,10 +12,16 @@ en:
     search_member_by_area: "Search by area"
     search_member_by_title: "Direct access to members"
     latest_news: "Latest news"
-    contact_association: "Contact the association"
-helpers:
-  select:
-    area:
-      prompt: "Select an area"
-    member:
-      prompt: "Select a member"
+    contact_association: "Contact the association" 
+  members:
+    collection: 
+      continue: "Read"
+  helpers:
+    submit:
+      search:
+        submit: "Search"
+    select:
+      area:
+        prompt: "Select an area"
+      member:
+        prompt: "Select a member"

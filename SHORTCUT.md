@@ -17,6 +17,10 @@ bundle exec rake assets:precompile
 
 cd ~/Github/gko_hotelsofstbarth_org
 bundle exec rake railties:install:migrations
+bundle exec rake db:migrate
+
+cd ~/Github/gko_hotelsofstbarth_org
+bundle exec rake railties:install:migrations
 bundle exec rake db:bootstrap
 
 bundle exec rake db:master:create
