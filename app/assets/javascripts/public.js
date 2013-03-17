@@ -31,25 +31,31 @@ var Site = {
 
 var Carousel = {
 
-	init : function() {
-		// The slider being synced must be initialized first
-		  $('#carousel').flexslider({
-		    animation: "slide",
-		    controlNav: false,
-		    animationLoop: false,
-		    slideshow: false,
-		    itemWidth: 156,
-		    itemMargin: 5,
-		    asNavFor: '#slider'
-		  });
+	init: function() {
 
-		  $('#slider').flexslider({
-		    animation: "slide",
-		    controlNav: false,
-		    animationLoop: false,
-		    slideshow: false,
-		    sync: "#carousel"
-		  });
+		if ($('#carousel li').length > 1) {
+			// The slider being synced must be initialized first
+			$('#carousel').flexslider({
+				animation: "slide",
+				controlNav: false,
+				animationLoop: false,
+				slideshow: false,
+				itemWidth: 156,
+				itemMargin: 5,
+				asNavFor: '#slider'
+			});
+
+			$('#slider').flexslider({
+				animation: "slide",
+				controlNav: false,
+				animationLoop: false,
+				slideshow: false,
+				sync: "#carousel"
+			});
+		} else {
+			$('#carousel').hide();
+		}
+
 	}
 }
 
