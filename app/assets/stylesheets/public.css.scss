@@ -200,7 +200,7 @@ $footerLinkColorHover:            $navbarLinkColorHover;// !default;
 $footerLinkBackgroundHover:       $navbarLinkBackgroundHover;// !default;
 
 // Import
-@import "twitter/bootstrap";
+@import "twitter.bootstrap.2.2.1/bootstrap-awesome";
 @import "gko/public/base";
 @import "flexslider/flexslider";
 
@@ -225,9 +225,7 @@ body {
 	@include box-sizing(border-box);
 	@include center-block();
 }
-#footer-container {
-	border-top: 4px solid $blueAlt;
-}
+
 .header-nav {
 	position: relative; 
 	
@@ -318,12 +316,17 @@ aside {
 		}
 	}
 }
-
+#footer-container,
+#copyright-container {
+	background: $footerBackground;
+}
 #footer-container {
+  border-top: 4px solid $blueAlt;
 	ul.nav.nav-menu {
 		@include center-nav();
 		padding-bottom: 8px;
 		border-bottom: 1px solid $blueAlt;
+
 	}
 }	
 /*-----------------------------------------
@@ -374,8 +377,11 @@ aside {
 		}
 	}
 }
-#copyright-container {
-	background: $footerBackground;
+.document_item .links {
+  margin-top: 20px;
+}
+.next-previous {
+  display:none;
 }
 /*-----------------------------------------
  ASIDE
@@ -394,7 +400,7 @@ aside#sidebar .grid > li {
 /*-----------------------------------------
  RESPONSIVE
 ----------------------------------------- */
-@import "twitter/bootstrap/responsive";
+@import "twitter.bootstrap.2.2.1/bootstrap-responsive"; 
 @import "gko/default_responsive";
 
 @media (max-width: 480px) {
@@ -512,7 +518,14 @@ aside#sidebar .grid > li {
 				font-weight: normal;
 				font-style: italic;
 				padding: 0;
-				margin: 0;
+				margin: 0; 
+        > a {
+				  color: #999999;
+				  &:hover {
+				    color: $white; 
+				    background-color: transparent;
+				  };
+				}
 			}
 		}
 
